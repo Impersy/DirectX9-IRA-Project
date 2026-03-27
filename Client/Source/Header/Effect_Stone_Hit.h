@@ -1,0 +1,33 @@
+#pragma once
+#include "Effect.h"
+#include "Base.h"
+
+class CEffect_Stone_Hit : public CEffect
+{
+private:
+	explicit CEffect_Stone_Hit(LPDIRECT3DDEVICE9 pGraphicDev);
+	explicit CEffect_Stone_Hit(const CEffect_Stone_Hit& rhs);
+	virtual ~CEffect_Stone_Hit();
+
+public:
+	virtual HRESULT Ready_GameObject(const _vec3& vPos, _bool bIsLast);
+	virtual _int Update_GameObject(const _float& fTimeDelta) override;
+	virtual void LateUpdate_GameObject() override;
+	virtual void Render_GameObject() override;
+
+private:
+	HRESULT			Add_Component(void);
+
+public:
+	static CEffect_Stone_Hit*	Create(LPDIRECT3DDEVICE9 pGraphicDev, const _vec3& vPos, _bool bIsLast = false);
+
+private:
+	virtual void Free(void) override;
+	void	Create_Debris(void);
+
+private:
+	_float				m_fAccTime = 0.f;
+	_bool				m_bIsLast = false;
+
+};
+
