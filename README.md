@@ -3,6 +3,8 @@
 DirectX9 기반 4인 팀 프로젝트로, 스킬 연출과 전투 흐름 제어를 중심으로 구현했습니다.  
 포트폴리오 문서 기준 핵심 기여는 **Time Stop Skill System**과 **Player Combat**입니다.
 
+상세 기술 문서 : https://drive.google.com/file/d/1H6HSmtyNmirEZvm-4HVJp8ri4Fd1YjDS/view?usp=sharing
+
 ## Project Info
 - **Engine**: DirectX9
 - **Development Period**: 30 Days
